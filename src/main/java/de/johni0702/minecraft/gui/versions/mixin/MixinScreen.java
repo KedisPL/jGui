@@ -31,7 +31,7 @@ public class MixinScreen {
     //#endif
 
     //#if MC>=12111
-    //$$ @Inject(method = "init()V", at = @At("HEAD"))
+    //$$ @Inject(method = "init(II)V", at = @At("HEAD"))
     //#else
     @Inject(method = "init(Lnet/minecraft/client/MinecraftClient;II)V", at = @At("HEAD"))
     //#endif
@@ -40,7 +40,7 @@ public class MixinScreen {
     }
 
     //#if MC>=12111
-    //$$ @Inject(method = "init()V", at = @At("TAIL"))
+    //$$ @Inject(method = "init(II)V", at = @At("TAIL"))
     //#else
     @Inject(method = "init(Lnet/minecraft/client/MinecraftClient;II)V", at = @At("TAIL"))
     //#endif
